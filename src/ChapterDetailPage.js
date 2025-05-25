@@ -12,7 +12,27 @@ function ChapterDetailPage({ chapterDetailsCache, setChapterDetailsCache }) {
     const [loadingDetails, setLoadingDetails] = useState(!chapterDetailsCache[storedChapterInfoKey]);
     const [detailsError, setDetailsError] = useState(null);
     const fetchController = useRef(new AbortController());
-
+    const loadingStyles = {
+        loadingContainer: {
+          backgroundColor: '#f0f0f0',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100vh',
+          width: '100vw',
+        },
+        loadingText: { // Renamed for clarity, since 'div' is not a valid key
+          color: '#333',
+          marginTop: '10px',
+          fontSize: '1.2em',
+        },
+        processingMessage: {
+          fontStyle: 'italic',
+          color: '#666',
+          marginTop: '5px',
+        },
+      };
     useEffect(() => {
         console.log(`[Effect START] ChapterDetailPage for: ${storedChapterInfoKey}`);
 
@@ -106,7 +126,14 @@ function ChapterDetailPage({ chapterDetailsCache, setChapterDetailsCache }) {
 
 
     if (loadingDetails) {
-        return <div>Loading chapter details...</div>;
+        return (
+            <div className="loading-container">
+            <img src="/loading.gif" alt="Loading..." />
+            <div>Loading {language} course content...</div>
+            <div style={loadingStyles.loadingText}>Loading {language} course content...</div>
+            <div style={loadingStyles.processingMessage}>We're processing your request, please wait.</div>
+          </div>
+        )
     }
 
     if (detailsError) {

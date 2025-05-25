@@ -36,7 +36,27 @@ function CoursePage({ chapterDetailsCache, setChapterDetailsCache }) {
   const [chapters, setChapters] = useState([]);
   const [loadingChapters, setLoadingChapters] = useState(true);
   const [chaptersError, setChaptersError] = useState(null);
-
+  const loadingStyles = {
+    loadingContainer: {
+      backgroundColor: '#f0f0f0',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh',
+      width: '100vw',
+    },
+    loadingText: { // Renamed for clarity, since 'div' is not a valid key
+      color: '#333',
+      marginTop: '10px',
+      fontSize: '1.2em',
+    },
+    processingMessage: {
+      fontStyle: 'italic',
+      color: '#666',
+      marginTop: '5px',
+    },
+  };
   console.log('CoursePage rendered with language:', language); // ADD THIS LINE
 
   useEffect(() => {
@@ -81,7 +101,15 @@ function CoursePage({ chapterDetailsCache, setChapterDetailsCache }) {
     fetchInitialData();
   }, [language]);
 
-  if (loadingChapters) return <div>Loading {language} course content...</div>;
+  if (loadingChapters) return (
+    <div className="loading-container">
+      <img src="/loading.gif" alt="Loading..." />
+      <div>Loading {language} course content...</div>
+      <div style={loadingStyles.loadingText}>Loading {language} course content...</div>
+      <div style={loadingStyles.processingMessage}>We're processing your request, please wait.</div>
+
+    </div>
+  );
   if (chaptersError) return <div>Error loading {language} course content: {chaptersError}</div>;
   console.log('ds:', chapters);
   return <CourseDisplay chapters={chapters} language={language} />;
