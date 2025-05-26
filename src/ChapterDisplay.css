@@ -1,0 +1,155 @@
+.chapter-container {
+  background-color: #FFFF00;
+  color: #000000;
+  padding: 40px;
+  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  line-height: 1.4;
+  text-align: left;
+  min-height: 100vh;
+}
+
+.no-data {
+  background-color: #FF0000;
+  color: #FFFFFF;
+  padding: 40px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 8px solid #000000;
+  box-shadow: 12px 12px 0px #000000;
+  margin: 20px;
+  transform: rotate(-2deg);
+}
+
+.section {
+  margin-bottom: 30px;
+  padding: 30px;
+  border: 6px solid #000000;
+  background-color: #00FF00;
+  text-align: left;
+  box-shadow: 8px 8px 0px #000000;
+  transform: rotate(0.2deg);
+}
+
+.section.exercises {
+  background-color: #FF00FF;
+  color: #FFFFFF;
+  transform: rotate(-0.2deg);
+}
+
+.section.examples {
+  background-color: #00FFFF;
+  color: #000000;
+  transform: rotate(0.3deg);
+}
+
+.section.description {
+  background-color: #FFFFFF;
+  color: #000000;
+  transform: rotate(-0.3deg);
+}
+
+.section-title {
+  color: #000000;
+  border-bottom: 6px solid #000000;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: left;
+  text-shadow: 3px 3px 0px #FFFFFF;
+}
+
+.section.exercises .section-title {
+  color: #FFFFFF;
+  text-shadow: 3px 3px 0px #000000;
+  border-bottom-color: #FFFFFF;
+}
+
+.subsection-title {
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+  background-color: #FFFFFF;
+  padding: 10px 15px;
+  border: 4px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  display: inline-block;
+  transform: rotate(-0.5deg);
+}
+
+.section.exercises .subsection-title {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  margin: 0;
+}
+
+.list-item {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.paragraph {
+  line-height: 1.6;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.section.exercises .paragraph {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #FFFFFF;
+}
+
+.code-snippet-container {
+  position: relative;
+  margin-bottom: 20px;
+  transform: rotate(-0.2deg);
+}
+
+.code-snippet-pre {
+  margin: 0;
+  overflow-x: auto;
+}
+
+.pre {
+  margin: 15px 0;
+  overflow-x: auto;
+  transform: rotate(0.2deg);
+}
+
+.code {
+  display: block;
+  padding: 20px;
+  background-color: #000000;
+  color: #00FF00;
+  border: 6px solid #00FF00;
+  box-shadow: 8px 8px 0px #00FF00;
+  overflow-x: auto;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+} 

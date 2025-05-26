@@ -1,0 +1,21 @@
+.chapter-detail-page {
+  background-color: #FFFF00;
+  min-height: 100vh;
+}
+
+.chapter-detail-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  margin: 40px 20px;
+  color: #000000;
+  text-shadow: 4px 4px 0px #FF0000;
+  background-color: #FFFFFF;
+  padding: 30px;
+  border: 8px solid #000000;
+  box-shadow: 12px 12px 0px #000000;
+  transform: rotate(-1deg);
+  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+} 

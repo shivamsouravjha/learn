@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import ChapterDisplay from './ChapterDisplay'; // Assuming this component exists
+import './ChapterDetailPage.css';
 
 function ChapterDetailPage({ chapterDetailsCache, setChapterDetailsCache }) {
     const { chapterTitle, language } = useParams();
@@ -145,8 +146,8 @@ function ChapterDetailPage({ chapterDetailsCache, setChapterDetailsCache }) {
     }
 
     return (
-        <div>
-            <h2>{chapterDetails.chapter_title || chapterKey.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h2>
+        <div className="chapter-detail-page">
+            <h2 className="chapter-detail-title">{chapterDetails.chapter_title || chapterKey.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h2>
             {console.log('ChapterDetailPage: Rendering chapter details:', chapterDetails)}
             <ChapterDisplay data={chapterDetails} />
         </div>
