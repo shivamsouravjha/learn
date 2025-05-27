@@ -8,9 +8,9 @@
 } */
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 /* .App-header {
@@ -25,51 +25,60 @@
 } */
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 .App-header {
-  text-align: center;
-  padding: 40px 0 20px;
-  color: white;
-  font-size: 2rem;
+	text-align: center;
+	padding: 40px 0 20px;
+	color: white;
+	font-size: 2rem;
 }
 
 .language-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 20px;
+	flex-wrap: wrap;
 }
 
 .language-buttons button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  background-color: #61dafb;
-  color: black;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+	height: 48px;
+	padding: 10px 20px;
+	font-size: 1rem;
+	font-weight: bold;
+	border: 2px solid black;
+	background-color: #a6faff;
+	color: black;
+	border-radius: 9999px;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
 
 .language-buttons button:hover {
-  background-color: #21a1f1;
+	background-color: #79f7ff;
+	box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+	transform: translate(-2px, -2px);
+}
+
+.language-buttons button:active {
+	background-color: #00e1ef;
+	transform: translate(0, 0);
+	box-shadow: none;
 }
 
 .App main {
-  text-align: center;
-  color: white;
-  margin-top: 20px;
+	text-align: center;
+	color: white;
+	margin-top: 20px;
 }
-
